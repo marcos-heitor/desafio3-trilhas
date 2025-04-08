@@ -1,0 +1,311 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 1px;
+    padding: 0%;
+    
+    
+}
+
+body {
+    height: 100vh;
+    background-color: white);
+    box-sizing: border-box;
+    color: rgb(20, 20, 20);
+    justify-content: center;
+    align-items: center;
+    
+       
+}
+
+
+    
+
+.apresentacao {
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    font-size: larger;
+    
+
+    
+}
+
+.imagens__lado__a__lado{
+    position: sticky;
+    top:0;
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+    
+     
+}
+
+.botao__voltar {
+    display: flex;
+
+}
+
+.botao__voltar button {
+    background-color: rgb(250, 248, 248);
+    border: transparent;
+    cursor: pointer;
+    /* padding: 2% 5%; */
+}
+
+
+.titulo-destaque {
+    color: #000;
+    font-size: 32px;
+    line-height: 120%;
+}
+
+.titulo__pagina__inicial {
+    color: #000;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.info__participantes {
+    margin-top: 70px;
+}
+
+.end_residencial {
+    margin-top: 70px;
+}
+
+
+.escolher__trilhas {
+    margin-top: 70px
+}
+
+.conteudo {
+    padding: 2% 5%;
+    
+
+}
+
+
+
+.box {
+    margin-top: 5px;
+    width: 600px;
+}
+
+.box input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+
+}
+
+.box input:focus {
+    border-color: #F3541C;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+}
+
+.bbox {
+    display: grid;
+    gap: 10px;
+    margin: 10px;
+}
+
+.bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 230px;
+    height: 150px;
+    padding: 20px;
+    font-size: 20px;
+    border: 4px solid #ccc;
+}
+
+.bx:active {
+    background-color: #f55b02;
+    color: white;
+}
+
+
+
+/* Mudei os card da escolha das trilhas */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    padding: 10px;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.card input {
+    display: none;
+}
+
+.card input:checked+.content {
+    color: #e14c32;
+}
+
+.card input:checked+.content p {
+    font-weight: bold;
+}
+
+.card input:checked+.content .icon {
+    font-size: 28px;
+}
+
+.card:hover {
+    border-color: #e14c32;
+}
+
+
+.container__acordos {
+    text-align: left;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.checkbox-label input {
+    display: none;
+}
+
+.checkbox-label .checkmark {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox-label input:checked+.checkmark {
+    background-color: #e14c32;
+    border-color: #e14c32;
+}
+
+.checkbox-label input:checked+.checkmark::after {
+    content: '✔';
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-label a {
+    color: #e14c32;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 2px solid #e14c32;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cancel {
+    background: white;
+    color: #e14c32;
+}
+
+.cancel:hover {
+    background: #f8e7e4;
+}
+
+.submit {
+    background: #e14c32;
+    color: white;
+}
+
+.submit:hover {
+    background: #c83d27;
+}
+
+
+
+.upload-container {
+    text-align: left;
+    
+    
+}
+
+.upload-box {
+    width: 580px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+}
+
+.upload-box img {
+    width: 40px;
+    opacity: 0.5;
+}
+
+.upload-box input {
+    display: none;
+}
+
+.upload-box:hover {
+    border-color: #aaa;
+    color: #777;
+}

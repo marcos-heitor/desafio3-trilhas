@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Trilhas</title>
+  <link rel="stylesheet" href="styleFormulario.css" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .btn-login {
+      background-color: #007bff;
+      color: white;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-login:hover {
+      background-color: #0056b3;
+    }
+
+    .mensagem-erro {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login do Participante</h1>
+    <input type="text" id="login-id" placeholder="ID do Usuário" required />
+    <input type="password" id="login-senha" placeholder="Senha" required />
+    <button class="btn-login" onclick="fazerLogin()">Entrar</button>
+    <p id="mensagem-erro" class="mensagem-erro">ID ou senha incorretos. Tente novamente.</p>
+  </div>
+
+  <script>
+    function fazerLogin() {
+      const id = document.getElementById("login-id").value.trim();
+      const senha = document.getElementById("login-senha").value.trim();
+
+      const idSalvo = localStorage.getItem("usuarioID");
+      const senhaSalva = localStorage.getItem("usuarioSenha");
+
+      if (id === idSalvo && senha === senhaSalva) {
+        alert("Login realizado com sucesso!");
+        window.location.href = "pagina-inicial.html"; // Página que você quiser redirecionar após login
+      } else {
+        document.getElementById("mensagem-erro").style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
